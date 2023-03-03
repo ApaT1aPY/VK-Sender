@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="image\logosender.png">
+	<script src="eel.js"></script>
+	<title>Настройки</title>
+</head>
+
+<body>
+	<center>
+		<div class="txt", style="display: block; ">
+			<h2><font color="white">Настройки</font></h2>
+			<input type="image" src="image\back.png" alt="Кнопка «input»" class="btnstng" onclick="document.location='main.html'">
+		</div>
+		<div class="box", style="display: block; ">
+			<input style="width: 80%;" type="text" id="tken" placeholder="Token"></input><br>
+			<button style="width: 80%; margin-top: 10px;" id="btn" onclick="add_token(), document.location='save.html'">Сохранить</button>
+			<p id="result"></p>
+		</div>
+		<div class="logoset", stye="display: block;">
+			<img src="image\logosender.png" alt="icon" class="logo">
+		</div>
+		<div class="by", stye="display: block;">
+			<font color="white">VK Sender by ApaTia</font><br>
+			<font color="white">Helped by Lazy & WantedLab❤</font>
+		</div>
+
+		<script type="text/javascript">
+		function add_token() {
+			let tken = document.getElementById('tken').value;
+			document.getElementById('tken').value = '';
+			let result = eel.add_token(tken);
+			document.getElementById('result').value = result;
+		}
+	</script>
+	</script>
+	</center>
+</body>
+
+</html>
