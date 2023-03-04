@@ -1,7 +1,5 @@
-import random
 import eel
 import vk_api
-from vk_api.longpoll import VkLongPoll, VkEventType
 from config import token
 
 
@@ -12,16 +10,15 @@ def add_token(tken):
     my_file.close()
 
 
-session = vk_api.VkApi(token=token)
-
+session = vk_api.VkApi(token='')
 
 
 @eel.expose
 def send_message(user_id, message):
     session.method("messages.send", {
-                   "user_id": user_id,
-                   "message": message,
-                   "random_id": 0}) # randrange(100000))
+        "user_id": user_id,
+        "message": message,
+        "random_id": 0})
     print("Сообщение отправлено")
 
 
