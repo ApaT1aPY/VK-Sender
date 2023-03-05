@@ -10,7 +10,7 @@ def add_token(tken):
     my_file.close()
 
 
-session = vk_api.VkApi(token='')
+session = vk_api.VkApi(token=token)
 
 
 @eel.expose
